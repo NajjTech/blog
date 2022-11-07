@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -9,6 +10,8 @@ Route::post('/reservation','ReservationController@reserve')->name('reservation.r
 Route::post('/contact','ContactController@sendMessage')->name('contact.send');
 
 Auth::routes();
+
+Route::get('/logout', [LoginController::class,'logout']);
 
 
 

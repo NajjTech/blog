@@ -20,10 +20,6 @@
                             <div class="d-md-flex pd-y-20 pd-md-y-0">
                                 <a href="" class="btn btn-primary" data-toggle="modal" data-target="#modaldemo3">New Price <i class="fa fa-plus"></i></a>
 
-
-
-                                <button type="submit" class="btn btn-info pd-y-13 pd-x-20 bd-0 mg-md-l-10 mg-t-10 mg-md-t-0 tx-uppercase tx-11 tx-spacing-2">Search</button>
-
                             </div>
                         </form>
                     </div>
@@ -78,13 +74,13 @@
                                                         </a>
                                                         @endif
                                                     </a>
-                                                    <a class="dropdown-item" href="{{url('/admin/edit_price/'.$p->id)}}">
+                                                    <!-- <a class="dropdown-item" href="{{url('/admin/edit_price/'.$p->id)}}">
                                                         <div><i class="fa fa-pencil"></i> Modify</div>
                                                     </a>
                                                     </a>
                                                     <a href="#" data-toggle="modal" data-target="#delete" data-id="{{ $p->id }}" class="dropdown-item" href="#">
                                                         <div><i class="fa fa-trash"></i> Delete</div>
-                                                    </a>
+                                                    </a> -->
                                                 </div>
                                             </div>
                                             </br></br>
