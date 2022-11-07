@@ -26,6 +26,11 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'],funct
     Route::post('/price_store',[BlogController::class,'PriceStore']);
     Route::get('/price_status/{id}/{status}',[BlogController::class,'PriceStatus']);
     Route::get('/edit_price/{id}',[BlogController::class,'EditPrice']);
+    Route::get('/viewprice/{id}',[BlogController::class,'ViewPrice']);
+    Route::post('/delete_price/{id}',[BlogController::class,'DeletePrice']);
+
+
+
     Route::get('/new_blog',[BlogController::class,'Create']);
     Route::post('/blog_post',[BlogController::class,'Store']);
     Route::get('/manage_blog',[BlogController::class,'BlogManage']);

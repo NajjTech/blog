@@ -563,13 +563,13 @@
                 </div>
 
                 <div class="row" data-aos="fade-left">
-
+                @foreach($prices as $key=>$price)
                     <div class="col-lg-3 col-md-6">
                         <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                            <h3>Basic (Non-Masking)</h3>
-                            <h4><sup>Tk.</sup>0.30<span> / SMS</span></h4>
+                            <h3>{{$price->title}}</h3>
+                            <h4><sup>Tk.</sup>{{$price->price}}<span> / SMS</span></h4>
                             <ul>
-                                <li>Min Order: 100 BDT </li>
+                                <li>Min Order: {{$price->order}} BDT </li>
                                 <li>Non-Masking</li>
                                 <li>Web & API</li>
                             </ul>
@@ -578,52 +578,11 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
 
-                    <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-                        <div class="box featured" data-aos="zoom-in" data-aos-delay="200">
-                            <h3>Standard (Non-Masking)</h3>
-                            <h4><sup>Tk.</sup>0.25<span> / SMS</span></h4>
-                            <ul>
-                                <li>Min Order: 5000 BDT </li>
-                                <li>Non-Masking</li>
-                                <li>Web & API</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
+                   
 
-                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                        <div class="box" data-aos="zoom-in" data-aos-delay="300">
-                            <h3>Super (Masking)</h3>
-                            <h4><sup>Tk.</sup>0.50<span> / SMS</span></h4>
-                            <ul>
-                                <li>Min Order: 5000 BDT </li>
-                                <li>Masking or Branded</li>
-                                <li>Web & API</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                        <div class="box" data-aos="zoom-in" data-aos-delay="400">
-                            <span class="advanced">Advanced</span>
-                            <h3>Ultra (Masking)</h3>
-                            <h4><sup>Tk.</sup>0.45<span> / SMS</span></h4>
-                            <ul>
-                                <li>Min Order: 10000 BDT </li>
-                                <li>Masking or Branded</li>
-                                <li>Web & API</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 

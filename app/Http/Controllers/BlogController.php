@@ -41,6 +41,8 @@ class BlogController extends Controller
             'title' =>$request->title,
             'price' =>$request->price,
             'order' =>$request->order,
+            'created_at'=> date('Y-m-d h:i:s'),
+            'updated_at'=> date('Y-m-d h:i:s'),
         ];
         Price::insert($data);
         Toastr::success('Price List Added','Success');
@@ -58,5 +60,20 @@ class BlogController extends Controller
     {
         $price = Price::whereId($id)->first();
         return view('admin.price.edit',compact('price'));
+    }
+
+    public function ViewPrice($id)
+    {
+
+        $data = Price::whereId($id)->first();
+        return json_decode($data);
+    }
+
+    public function DeletePrice($id)
+    {
+        Price::whereId($id)->delete();
+        Toastr::success('Price Deleted','Success');
+        return back();
+
     }
 }

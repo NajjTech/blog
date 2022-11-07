@@ -37,6 +37,8 @@
                                         <th>Title</th>
                                         <th>Price</th>
                                         <th>Min Order</th>
+                                        <th>Created</th>
+                                        <th>Updated</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -48,6 +50,8 @@
                                         <td>{{$p->title}}</td>
                                         <td>{{$p->price}}</td>
                                         <td>{{$p->order}}</td>
+                                        <td>{{date('d-m-y h:i a', strtotime($p->created_at))}}</td>
+                                        <td>{{date('d-m-y h:i a', strtotime($p->updated_at))}}</td>
                                         <td>
                                             @if($p->status == 1 )
                                             <span class="badge badge-success"> Active </span>
@@ -78,7 +82,7 @@
                                                         <div><i class="fa fa-pencil"></i> Modify</div>
                                                     </a>
                                                     </a>
-                                                    <a href="#" data-toggle="modal" data-target="#deleteuser" data-id="{{ $p->id }}" class="dropdown-item" href="#">
+                                                    <a href="#" data-toggle="modal" data-target="#delete" data-id="{{ $p->id }}" class="dropdown-item" href="#">
                                                         <div><i class="fa fa-trash"></i> Delete</div>
                                                     </a>
                                                 </div>
@@ -160,7 +164,7 @@
 
 
 
-<div id="deleteuser" class="modal fade ">
+<div id="delete" class="modal fade ">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="modal-content bd-0 tx-14">
             <div class="modal-header pd-y-20 pd-x-25">
@@ -179,15 +183,15 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label class="form-control-label">User name: <span class="tx-danger">*</span></label>
-                            <input class="form-control" type="text" id="del_user_name" value="" readonly="">
+                            <label class="form-control-label">Title: <span class="tx-danger">*</span></label>
+                            <input class="form-control" type="text" id="del_title" value="" readonly="">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="modal-footer">
-                <a id="deleteusr" href="" type="button" class="btn btn-danger tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium">Delete <i class="ion-trash-a"></i></a>
+                <a id="deleteprc" href="" type="button" class="btn btn-danger tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium">Delete <i class="ion-trash-a"></i></a>
                 <button type="button" class="btn btn-info tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" data-dismiss="modal">Cancel</button>
             </div>
 
@@ -199,14 +203,14 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#deleteuser').on('show.bs.modal', function(e) {
+        $('#delete').on('show.bs.modal', function(e) {
             var id = $(e.relatedTarget).data('id');
             $.ajax({
                 type: 'get',
-                url: '{{ url(' / admin / viewuser / ') }}/' + id,
-                success: function(user) {
-                    $('#del_user_name').val(user[0].name);
-                    $("#deleteusr").attr('href', '/admin/delete_user/' + user[0].id);
+                url: '{{ url('/admin/viewprice/') }}/' + id,
+                success: function(data) {
+                    $('#del_title').val(data.title);
+                    $("#deleteprc").attr('href', '/admin/delete_price/' + data.id);
                 }
             });
         });

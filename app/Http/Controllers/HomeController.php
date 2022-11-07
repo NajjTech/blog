@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Item;
+use App\Price;
 use Illuminate\Http\Request;
 use App\Slider;
 
@@ -15,6 +16,7 @@ class HomeController extends Controller
         $sliders = Slider::all();
         $categories = Category::all();
         $items = Item::all();
-        return view('index',compact('sliders','categories','items'));
+        $prices = Price::where('status',1)->get();
+        return view('index',compact('sliders','categories','items','prices'));
     }
 }
