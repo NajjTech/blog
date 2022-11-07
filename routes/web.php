@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/','HomeController@index')->name('index');
-Route::get('/blog',[HomeController::class,'Blogger']);
+Route::get('/blog',[HomeController::class,'Blogger'])->name('blog');
 
 Auth::routes();
 
