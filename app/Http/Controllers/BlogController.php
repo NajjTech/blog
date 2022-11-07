@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Price;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -31,5 +32,31 @@ class BlogController extends Controller
     {
         $price = Price::paginate(10);
         return view('admin.price.pricelist',compact('price'));
+    }
+
+    public function PriceStore(Request $request)
+    {
+        $data = [
+
+            'title' =>$request->title,
+            'price' =>$request->price,
+            'order' =>$request->order,
+        ];
+        Price::insert($data);
+        Toastr::success('Price List Added','Success');
+        return back();
+    }
+
+    public function PriceStatus($id,$status)
+    {
+        Price::whereId($id)->update(['status'=>$status]);
+        Toastr::success('Price Status Updated','Success');
+        return back();
+    }
+
+    public function EditPrice($id)
+    {
+        $price = Price::whereId($id)->first();
+        return view('admin.price.edit',compact('price'));
     }
 }

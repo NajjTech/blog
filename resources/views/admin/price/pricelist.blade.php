@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>Title</th>
                                         <th>Price</th>
-                                        <th>Order</th>
+                                        <th>Min Order</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -65,20 +65,20 @@
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                                     <a href="#">
                                                         @if($p->status == 0)
-                                                        <a href="{{url('/admin/status/'.$p->id.'/1')}}" class="dropdown-item">
+                                                        <a href="{{url('/admin/price_status/'.$p->id.'/1')}}" class="dropdown-item">
                                                             <div><i class="fa fa-check"></i> Active</div>
                                                         </a>
                                                         @else
-                                                        <a href="{{url('/admin/status/'.$p->id.'/0')}}" class="dropdown-item">
+                                                        <a href="{{url('/admin/price_status/'.$p->id.'/0')}}" class="dropdown-item">
                                                             <div><i class="fa fa-pause"></i> Pause</div>
                                                         </a>
                                                         @endif
                                                     </a>
-                                                    <a class="dropdown-item" href="{{url('/admin/edit_user/'.$p->id)}}">
+                                                    <a class="dropdown-item" href="{{url('/admin/edit_price/'.$p->id)}}">
                                                         <div><i class="fa fa-pencil"></i> Modify</div>
                                                     </a>
                                                     </a>
-                                                    <a href="#" data-toggle="modal" data-target="#deleteuser" data-id="{{ $u->id }}" class="dropdown-item" href="#">
+                                                    <a href="#" data-toggle="modal" data-target="#deleteuser" data-id="{{ $p->id }}" class="dropdown-item" href="#">
                                                         <div><i class="fa fa-trash"></i> Delete</div>
                                                     </a>
                                                 </div>
@@ -119,7 +119,7 @@
                 </button>
             </div>
             <div class="modal-body pd-20">
-                <form class="form-horizontal" method="POST" action="{{ url('/admin/new_user') }}" enctype="multipart/form-data">
+                <form class="form-horizontal" method="POST" action="{{ url('/admin/price_store') }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="row gx-0">
                         <div class="col-12">

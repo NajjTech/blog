@@ -23,6 +23,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'],funct
     Route::get('/gallery',[BlogController::class,'Gallery']);
     Route::get('/team',[BlogController::class,'Team']);
     Route::get('/price',[BlogController::class,'Price']);
+    Route::post('/price_store',[BlogController::class,'PriceStore']);
+    Route::get('/price_status/{id}/{status}',[BlogController::class,'PriceStatus']);
+    Route::get('/edit_price/{id}',[BlogController::class,'EditPrice']);
     Route::get('/new_blog',[BlogController::class,'Create']);
     Route::post('/blog_post',[BlogController::class,'Store']);
     Route::get('/manage_blog',[BlogController::class,'BlogManage']);
