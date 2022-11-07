@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Price;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -28,6 +29,7 @@ class BlogController extends Controller
 
     public function Price(Request $request)
     {
-        return view('admin.price.pricelist');
+        $price = Price::paginate(10);
+        return view('admin.price.pricelist',compact('price'));
     }
 }
