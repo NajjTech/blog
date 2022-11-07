@@ -27,28 +27,28 @@
 
                     <div style="overflow-x:auto;">
                         <div class="table-responsive">
-                            <table class="table table-bordered mg-b-0">
+                            <table class="table table-bordered mg-b-0 text-center">
                                 <thead>
                                     <tr>
-                                        <th>Title</th>
-                                        <th>Price</th>
-                                        <th>Min Order</th>
-                                        <th>Created</th>
-                                        <th>Updated</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
+                                        <th class="text-center">Title</th>
+                                        <th class="text-center">Price</th>
+                                        <th class="text-center text-nowrap">Min Order</th>
+                                        <th class="text-center">Created</th>
+                                        <th class="text-center">Updated</th>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @if(count($price) > 0)
                                     @foreach($price as $p)
                                     <tr>
-                                        <td>{{$p->title}}</td>
-                                        <td>{{$p->price}}</td>
-                                        <td>{{$p->order}}</td>
-                                        <td>{{date('d-m-y h:i a', strtotime($p->created_at))}}</td>
-                                        <td>{{date('d-m-y h:i a', strtotime($p->updated_at))}}</td>
-                                        <td>
+                                        <td class="text-nowrap">{{$p->title}}</td>
+                                        <td class="text-nowrap">{{$p->price}}</td>
+                                        <td class="text-nowrap">{{$p->order}}</td>
+                                        <td class="text-nowrap">{{date('d-m-y h:i a', strtotime($p->created_at))}}</td>
+                                        <td class="text-nowrap">{{date('d-m-y h:i a', strtotime($p->updated_at))}}</td>
+                                        <td class="text-nowrap">
                                             @if($p->status == 1 )
                                             <span class="badge badge-success"> Active </span>
                                             @else
@@ -58,7 +58,7 @@
 
                                         <td>
 
-                                            <div class="dropdown show">
+                                            <div class="dropdown show mt-5">
                                                 <a class="dropdown-toggle btn btn-info" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 </a>
 
@@ -136,7 +136,7 @@
                         </div>
                         <div class="col-12">
                             <div class="form-group">
-                                <label>Order</label>
+                                <label>Min Order</label>
                                 <input type="number" name="order" class="form-control" placeholder="Enter Order">
                             </div>
                         </div>

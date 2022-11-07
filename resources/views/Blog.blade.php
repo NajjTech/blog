@@ -135,7 +135,7 @@
                 </div>
 
                 <div class="row no-gutters" data-aos="fade-left">
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-2 mt-md-0">
                         <a class="text-dark" href="#blog">
                             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
                                 <img src="assets/img/gallery/gallery-21.jpg" alt="" class="img-fluid blog-img">
@@ -151,10 +151,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-2 mt-md-0">
                         <a class="text-dark" href="#blog">
                             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                                <img src="assets/img/gallery/gallery-21.jpg" alt="" class="img-fluid blog-img">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6wLrEn7ZgthgJuY2lisVAdvnkf4FYwd8ZtQ&usqp=CAU" alt="" class="img-fluid blog-img">
                             </div>
                             <div class="bg-light">
                                 <div class="p-2">
@@ -167,10 +167,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-2 mt-md-0">
                         <a class="text-dark" href="#blog">
                             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                                <img src="assets/img/gallery/gallery-21.jpg" alt="" class="img-fluid blog-img">
+                                <img src="https://neilpatel.com/wp-content/uploads/fly-images/105041/shutterstock_354820034-1200x675-c.png" alt="" class="img-fluid blog-img">
                             </div>
                             <div class="bg-light">
                                 <div class="p-2">

@@ -561,6 +561,19 @@
                     <h2>Pricing</h2>
                     <p>Check our Pricing</p>
                 </div>
+                <div class="bg-light">
+                    <ul class="row g-0">
+                        <button class="col blog-tab py-2 border border-0">
+                            <p class="fs-6 fw-bold mt-3">NON-MASKING SMS</p>
+                        </button>
+                        <button class="col py-2 border border-0">
+                            <p class="fs-6 fw-bold mt-3">MASKING SMS</p>
+                        </button>
+                        <button class="col py-2 border border-0">
+                            <p class="fs-6 fw-bold mt-3">LOCATION BASED SMS</p>
+                        </button>
+                    </ul>
+                </div>
 
                 <div class="row" data-aos="fade-left">
                     @foreach($prices as $key=>$price)
