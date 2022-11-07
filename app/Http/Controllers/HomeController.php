@@ -19,4 +19,9 @@ class HomeController extends Controller
         $prices = Price::where('status',1)->get();
         return view('index',compact('sliders','categories','items','prices'));
     }
+
+    public function Blogger()
+    {
+        return view('Blog');
+    }
 }

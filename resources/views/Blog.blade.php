@@ -87,9 +87,7 @@
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#features">Features</a></li>
                     <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-                    <li><a class="nav-link scrollto" href="{{url('/blog')}}">Blog</a></li>
+                    
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     <li class="dropdown"><a href="#"><span>Sign In</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
@@ -553,49 +551,6 @@
         </section>
         <!-- End Team Section -->
 
-        <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing">
-            <div class="container">
-
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Pricing</h2>
-                    <p>Check our Pricing</p>
-                </div>
-
-                <div class="row" data-aos="fade-left">
-                    @foreach($prices as $key=>$price)
-                    <div class="col-lg-3 col-md-6">
-                        @if($price->title == "Standard (Non-Masking)")
-                        <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
-                            @elseif($price->title == "Ultra (Masking)")
-                            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                                <span class="advanced">Advanced</span>
-                                @else
-                                <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                                    @endif
-                                    <h3>{{$price->title}}</h3>
-                                    <h4><sup>Tk.</sup>{{$price->price}}<span> / SMS</span></h4>
-                                    <ul>
-                                        <li>Min Order: {{$price->order}} BDT </li>
-                                        <li>Non-Masking</li>
-                                        <li>Web & API</li>
-                                    </ul>
-                                    <div class="btn-wrap">
-                                        <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-
-
-                        </div>
-
-
-
-                    </div>
-                </div>
-        </section>
-        <!-- End Pricing Section -->
 
         <!-- ======= Blog Section ======= -->
         <section id="blog">

@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/','HomeController@index')->name('index');
+Route::get('/blog',[HomeController::class,'Blogger']);
 Route::post('/reservation','ReservationController@reserve')->name('reservation.reserve');
 Route::post('/contact','ContactController@sendMessage')->name('contact.send');
 
