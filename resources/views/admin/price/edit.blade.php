@@ -1,4 +1,4 @@
-@extends('layouts.master') 
+@extends('layouts.master')
 @section('content')
 <div class="br-mainpanel">
     <div class="br-pageheader pd-y-15 pd-l-20">
@@ -9,19 +9,35 @@
     </div>
     <div class="br-pagebody">
         <div class="row">
-
-            <div class="col-lg-6">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
                 <div class="br-section-wrapper">
                     <div class="form-layout">
-                        <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">Edit</h6>
+                        <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">Price Edit</h6>
                         <form class="form-horizontal" method="POST" action="{{url('admin/update_price/'.$price->id)}}" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
-                            <div class="row mg-t-20">
-                                <label class="col-sm-4 form-control-label">Name: <span class="tx-danger">*</span></label>
-                                <div class="col-sm-8 mg-t-10 mg-sm-t-0">
-                                    <input type="text" name="name" value="{{$price}}" class="form-control"/>  
+
+                            <div class="row gx-0">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Title</label>
+                                        <input type="text" name="title" class="form-control" value="{{$price->title}}">
+                                    </div>
                                 </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Price</label>
+                                        <input type="number" name="price" class="form-control" value="{{$price->price}}">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Order</label>
+                                        <input type="number" name="order" class="form-control" value="{{$price->order}}">
+                                    </div>
+                                </div>
+
                             </div>
 
 
@@ -38,7 +54,7 @@
                 </div><!-- br-section-wrapper -->
 
             </div><!-- col-lg-6 -->
-
+            <div class="col-md-3"></div>
 
         </div><!-- row -->
 

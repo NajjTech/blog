@@ -26,7 +26,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'],funct
     Route::post('/price_store',[BlogController::class,'PriceStore']);
     Route::get('/price_status/{id}/{status}',[BlogController::class,'PriceStatus']);
     Route::get('/edit_price/{id}',[BlogController::class,'EditPrice']);
-    Route::get('/update_price/{id}',[BlogController::class,'UpdatePrice']);
+    Route::post('/update_price/{id}',[BlogController::class,'UpdatePrice']);
     Route::get('/viewprice/{id}',[BlogController::class,'ViewPrice']);
     Route::get('/delete_price/{id}',[BlogController::class,'DeletePrice']);
 

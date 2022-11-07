@@ -44,7 +44,7 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '734318387681242');
         fbq('track', 'PageView');
-        fbq('track'
+        fbq('track',
             'lead');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=734318387681242&ev=PageView&noscript=1" /></noscript>
@@ -563,30 +563,37 @@
                 </div>
 
                 <div class="row" data-aos="fade-left">
-                @foreach($prices as $key=>$price)
+                    @foreach($prices as $key=>$price)
                     <div class="col-lg-3 col-md-6">
-                        <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                            <h3>{{$price->title}}</h3>
-                            <h4><sup>Tk.</sup>{{$price->price}}<span> / SMS</span></h4>
-                            <ul>
-                                <li>Min Order: {{$price->order}} BDT </li>
-                                <li>Non-Masking</li>
-                                <li>Web & API</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
+                        @if($price->title == "Standard (Non-Masking)")
+                        <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
+                            @elseif($price->title == "Ultra (Masking)")
+                            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                                <span class="advanced">Advanced</span>
+                                @else
+                                <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                                    @endif
+                                    <h3>{{$price->title}}</h3>
+                                    <h4><sup>Tk.</sup>{{$price->price}}<span> / SMS</span></h4>
+                                    <ul>
+                                        <li>Min Order: {{$price->order}} BDT </li>
+                                        <li>Non-Masking</li>
+                                        <li>Web & API</li>
+                                    </ul>
+                                    <div class="btn-wrap">
+                                        <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
+                                    </div>
+                                </div>
                             </div>
+                            @endforeach
+
+
                         </div>
+
+
+
                     </div>
-                    @endforeach
-
-                   
-
-
-
                 </div>
-
-            </div>
         </section>
         <!-- End Pricing Section -->
 

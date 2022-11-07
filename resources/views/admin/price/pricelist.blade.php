@@ -135,7 +135,7 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Price</label>
-                                <input type="number" name="price" class="form-control" placeholder="Enter Price">
+                                <input type="text" name="price" class="form-control" placeholder="Enter Price">
                             </div>
                         </div>
                         <div class="col-12">
