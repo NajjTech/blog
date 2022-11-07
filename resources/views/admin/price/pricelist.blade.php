@@ -30,6 +30,7 @@
                             <table class="table table-bordered mg-b-0 text-center">
                                 <thead>
                                     <tr>
+<<<<<<< HEAD
                                         <th class="text-center">Title</th>
                                         <th class="text-center">Price</th>
                                         <th class="text-center text-nowrap">Min Order</th>
@@ -37,18 +38,45 @@
                                         <th class="text-center">Updated</th>
                                         <th class="text-center">Status</th>
                                         <th class="text-center">Action</th>
+=======
+                                        <th>Type</th>
+                                        <th>Title</th>
+                                        <th>Price</th>
+                                        <th>Min Order</th>
+                                        <th>Created</th>
+                                        <th>Updated</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+>>>>>>> 4e213c0cea5d1707c2d0a744c0bcc73f89e4a746
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @if(count($price) > 0)
                                     @foreach($price as $p)
                                     <tr>
+<<<<<<< HEAD
                                         <td class="text-nowrap">{{$p->title}}</td>
                                         <td class="text-nowrap">{{$p->price}}</td>
                                         <td class="text-nowrap">{{$p->order}}</td>
                                         <td class="text-nowrap">{{date('d-m-y h:i a', strtotime($p->created_at))}}</td>
                                         <td class="text-nowrap">{{date('d-m-y h:i a', strtotime($p->updated_at))}}</td>
                                         <td class="text-nowrap">
+=======
+                                        <td>@if($p->type == 1)
+                                            Non-Masking
+                                            @elseif($p->type ==2)
+                                            Masking
+                                            @else
+                                            Location
+                                            @endif
+                                        </td>
+                                        <td>{{$p->title}}</td>
+                                        <td>{{$p->price}}</td>
+                                        <td>{{$p->order}}</td>
+                                        <td>{{date('d-m-y h:i a', strtotime($p->created_at))}}</td>
+                                        <td>{{date('d-m-y h:i a', strtotime($p->updated_at))}}</td>
+                                        <td>
+>>>>>>> 4e213c0cea5d1707c2d0a744c0bcc73f89e4a746
                                             @if($p->status == 1 )
                                             <span class="badge badge-success"> Active </span>
                                             @else
@@ -126,6 +154,17 @@
                             <div class="form-group">
                                 <label>Title</label>
                                 <input type="text" name="title" class="form-control" placeholder="Enter Title">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select class="form-control" name="type">
+                                    <option value="">Select</option>
+                                    <option value="1">Non_masking</option>
+                                    <option value="2">Masking</option>
+                                    <option value="3">Location</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-12">

@@ -2,12 +2,16 @@
 @section('content')
    <!-- ########## START: MAIN PANEL ########## -->
    <div class="br-mainpanel">
-      <div class="pd-10">
-        <h4 class="tx-gray-800 mg-b-5">Admin Dashboard</h4>
+      <div class="pd-x-30">
+        <h4 class="tx-gray-800 mg-b-5">Site Admin Dashboard</h4>
         <p class="mg-b-0"> </p>
       </div><!-- d-flex -->
 
-      <div class="br-pagebody mg-t-5 pd-x-30">
+      <div class="mg-t-10 pd-x-30">
+        <a href="{!! route('index') !!}" target="blank" class="btn btn-success">VISIT SITE <i class="fa fa-globe"></i></a>
+      </div>
+
+      <!-- <div class="br-pagebody mg-t-5 pd-x-30">
         <div class="row row-sm">
           <div class="col-sm-6 col-xl-3">
             <div class="bg-teal rounded overflow-hidden">
@@ -19,7 +23,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- col-3 -->
+          </div>
           <div class="col-sm-6 col-xl-3 mg-t-20 mg-sm-t-0">
             <div class="bg-danger rounded overflow-hidden">
               <div class="pd-25 d-flex align-items-center">
@@ -30,7 +34,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- col-3 -->
+          </div>
           <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
             <div class="bg-primary rounded overflow-hidden">
               <div class="pd-25 d-flex align-items-center">
@@ -41,7 +45,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- col-3 -->
+          </div>
           <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
             <div class="bg-br-primary rounded overflow-hidden">
               <div class="pd-25 d-flex align-items-center">
@@ -52,8 +56,8 @@
                 </div>
               </div>
             </div>
-          </div><!-- col-3 -->
-        </div><!-- row -->
+          </div>
+        </div> -->
 
       
 
