@@ -18,6 +18,7 @@ class CreatePricesTable extends Migration
             $table->string('title');
             $table->string('price');
             $table->string('order');
+            $table->tinyInteger('type')->default(1)->comment('Non-Masking=1,Masking=2,Loacation=3');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });

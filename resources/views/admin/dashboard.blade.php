@@ -11,7 +11,7 @@
         <a href="{!! route('index') !!}" target="blank" class="btn btn-success">VISIT SITE <i class="fa fa-globe"></i></a>
       </div>
 
-      <div class="br-pagebody mg-t-5 pd-x-30">
+      <!-- <div class="br-pagebody mg-t-5 pd-x-30">
         <div class="row row-sm">
           <div class="col-sm-6 col-xl-3">
             <div class="bg-teal rounded overflow-hidden">
@@ -23,7 +23,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- col-3 -->
+          </div>
           <div class="col-sm-6 col-xl-3 mg-t-20 mg-sm-t-0">
             <div class="bg-danger rounded overflow-hidden">
               <div class="pd-25 d-flex align-items-center">
@@ -34,7 +34,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- col-3 -->
+          </div>
           <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
             <div class="bg-primary rounded overflow-hidden">
               <div class="pd-25 d-flex align-items-center">
@@ -45,7 +45,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- col-3 -->
+          </div>
           <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
             <div class="bg-br-primary rounded overflow-hidden">
               <div class="pd-25 d-flex align-items-center">
@@ -56,8 +56,8 @@
                 </div>
               </div>
             </div>
-          </div><!-- col-3 -->
-        </div><!-- row -->
+          </div>
+        </div> -->
 
       
 
