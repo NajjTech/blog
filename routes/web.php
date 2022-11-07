@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','HomeController@index')->name('index');
 Route::get('/blog',[HomeController::class,'Blogger']);
-Route::post('/reservation','ReservationController@reserve')->name('reservation.reserve');
-Route::post('/contact','ContactController@sendMessage')->name('contact.send');
 
 Auth::routes();
 
@@ -42,6 +40,4 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'],funct
     Route::get('/manage_blog',[BlogController::class,'BlogManage']);
 
     
-    Route::post('/profile/update', 'UserController@Update')->name('user.profile.update');
-
 });
