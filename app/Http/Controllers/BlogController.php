@@ -76,4 +76,17 @@ class BlogController extends Controller
         return back();
 
     }
+
+    public function UpdatePrice(Request $request,$id)
+    {
+        $data = [
+            'title' =>$request->title,
+            'price' =>$request->price,
+            'order' =>$request->order,
+            'updated_at'=> date('Y-m-d h:i:s'),
+        ];
+        Price::whereId($id)->update($data);
+        Toastr::success('Price Updated !!!','Success');
+        return back();
+    }
 }
