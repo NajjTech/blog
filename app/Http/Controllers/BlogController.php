@@ -8,24 +8,15 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    public function About(Request $request)
+
+    public function index()
     {
-        return view('admin.about.about_us');
+        return view('admin.blog.list');
     }
 
-    public function Features(Request $request)
+    public function create()
     {
-        return view('admin.features.feature');
-    }
-
-    public function Gallery(Request $request)
-    {
-        return view('admin.gellery.gellery');
-    }
-
-    public function Team(Request $request)
-    {
-        return view('admin.team.team');
+        return view('admin.blog.create');
     }
 
    

@@ -14,13 +14,13 @@
         <a href="#" class="br-menu-link">
             <div class="br-menu-item">
                 <i class="menu-item-icon fa fa-users tx-24"></i>
-                <span class="menu-item-label">    &nbsp;    Team</span>
+                <span class="menu-item-label">    &nbsp;    Blog</span>
                 <i class="menu-item-arrow fa fa-angle-down"></i>
             </div>
         </a>
         <ul class="br-menu-sub nav flex-column">
-            <li class="nav-item"><a href="{{url('admin/new_dev')}}" class="nav-link"> New Member</a></li>
-            <li class="nav-item"><a href="{{url('admin/manage_dev')}}" class="nav-link"> Manage Member</a></li>
+            <li class="nav-item"><a href="{{url('admin/new_blog')}}" class="nav-link"> New Blog</a></li>
+            <li class="nav-item"><a href="{{url('admin/manage_blog')}}" class="nav-link"> Manage Blog</a></li>
             
         </ul>
 
@@ -33,19 +33,6 @@
             </div>
         </a>
         
-
-        <a href="#" class="br-menu-link">
-            <div class="br-menu-item">
-                <i class="menu-item-icon fa fa-list-alt tx-24"></i>
-                <span class="menu-item-label">    &nbsp;    Blog</span>
-                <i class="menu-item-arrow fa fa-angle-down"></i>
-            </div>
-        </a>
-        <ul class="br-menu-sub nav flex-column">
-            <li class="nav-item"><a href="{{url('admin/new_blog')}}" class="nav-link"> New Blog</a></li>
-            <li class="nav-item"><a href="{{url('admin/manage_blog')}}" class="nav-link"> Manage Blog</a></li>
-            
-        </ul>
 
     </div><!-- br-sideleft-menu -->
 
