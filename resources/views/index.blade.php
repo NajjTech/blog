@@ -561,109 +561,112 @@
                     <h2>Pricing</h2>
                     <p>Check our Pricing</p>
                 </div>
+                <!-- Pricing tab menu -->
+                <ul class="nav nav-tabs row gx-0 bg-light" id="myTab" role="tablist">
 
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Non Masking</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Masking</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LOcation</button>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-  @foreach($nonmasking as $key=>$nonmasking)
-                    <div class="col-lg-3 col-md-6">
-                        @if($nonmasking->title == "Standard (Non-Masking)")
-                        <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
-                            @elseif($nonmasking->title == "Ultra (Masking)")
-                            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                                <span class="advanced">Advanced</span>
-                                @else
+                    <li class="col nav-item price-width" role="presentation">
+                        <button class="nav-link active rounded fw-bold" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">NON-MASKING SMS</button>
+                    </li>
+                    <li class="col nav-item" role="presentation">
+                        <button class="nav-link fw-bold rounded" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">MASKING SMS</button>
+                    </li>
+                    <li class="col nav-item" role="presentation">
+                        <button class="nav-link fw-bold rounded" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LOCATION BASED SMS</button>
+                    </li>
+
+                </ul>
+                <!-- Pricing card items -->
+                <div class="tab-content mt-3" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        @foreach($nonmasking as $key=>$nonmasking)
+                        <div class="col-lg-3 col-md-6">
+                            @if($nonmasking->title == "Standard (Non-Masking)")
+                            <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
+                                @elseif($nonmasking->title == "Ultra (Masking)")
                                 <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                                    @endif
-                                    <h3>{{$nonmasking->title}}</h3>
-                                    <h4><sup>Tk.</sup>{{$nonmasking->price}}<span> / SMS</span></h4>
-                                    <ul>
-                                        <li>Min Order: {{$nonmasking->order}} BDT </li>
-                                        <li>Non-Masking</li>
-                                        <li>Web & API</li>
-                                    </ul>
-                                    <div class="btn-wrap">
-                                        <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
+                                    <span class="advanced">Advanced</span>
+                                    @else
+                                    <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                                        @endif
+                                        <h3>{{$nonmasking->title}}</h3>
+                                        <h4><sup>Tk.</sup>{{$nonmasking->price}}<span> / SMS</span></h4>
+                                        <ul>
+                                            <li>Min Order: {{$nonmasking->order}} BDT </li>
+                                            <li>Non-Masking</li>
+                                            <li>Web & API</li>
+                                        </ul>
+                                        <div class="btn-wrap">
+                                            <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
+                                        </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
-                            @endforeach
-  </div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-  @foreach($masking as $key=>$masking)
-                    <div class="col-lg-3 col-md-6">
-                        @if($masking->title == "Standard (Non-Masking)")
-                        <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
-                            @elseif($masking->title == "Ultra (Masking)")
-                            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                                <span class="advanced">Advanced</span>
-                                @else
-                                <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                                    @endif
-                                    <h3>{{$masking->title}}</h3>
-                                    <h4><sup>Tk.</sup>{{$masking->price}}<span> / SMS</span></h4>
-                                    <ul>
-                                        <li>Min Order: {{$masking->order}} BDT </li>
-                                        <li>Non-Masking</li>
-                                        <li>Web & API</li>
-                                    </ul>
-                                    <div class="btn-wrap">
-                                        <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                @foreach($masking as $key=>$masking)
+                                <div class="col-lg-3 col-md-6">
+                                    @if($masking->title == "Standard (Non-Masking)")
+                                    <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
+                                        @elseif($masking->title == "Ultra (Masking)")
+                                        <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                                            <span class="advanced">Advanced</span>
+                                            @else
+                                            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                                                @endif
+                                                <h3>{{$masking->title}}</h3>
+                                                <h4><sup>Tk.</sup>{{$masking->price}}<span> / SMS</span></h4>
+                                                <ul>
+                                                    <li>Min Order: {{$masking->order}} BDT </li>
+                                                    <li>Non-Masking</li>
+                                                    <li>Web & API</li>
+                                                </ul>
+                                                <div class="btn-wrap">
+                                                    <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                        @foreach($location as $key=>$location)
+                                        <div class="col-lg-3 col-md-6">
+                                            @if($location->title == "Standard (Non-location)")
+                                            <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
+                                                @elseif($location->title == "Ultra (location)")
+                                                <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                                                    <span class="advanced">Advanced</span>
+                                                    @else
+                                                    <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                                                        @endif
+                                                        <h3>{{$location->title}}</h3>
+                                                        <h4><sup>Tk.</sup>{{$location->price}}<span> / SMS</span></h4>
+                                                        <ul>
+                                                            <li>Min Order: {{$location->order}} BDT </li>
+                                                            <li>Non-Masking</li>
+                                                            <li>Web & API</li>
+                                                        </ul>
+                                                        <div class="btn-wrap">
+                                                            <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
                                     </div>
                                 </div>
-                            </div>
-                            @endforeach
-  </div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-  @foreach($location as $key=>$location)
-                    <div class="col-lg-3 col-md-6">
-                        @if($location->title == "Standard (Non-location)")
-                        <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
-                            @elseif($location->title == "Ultra (location)")
-                            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                                <span class="advanced">Advanced</span>
-                                @else
-                                <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                                    @endif
-                                    <h3>{{$location->title}}</h3>
-                                    <h4><sup>Tk.</sup>{{$location->price}}<span> / SMS</span></h4>
-                                    <ul>
-                                        <li>Min Order: {{$location->order}} BDT </li>
-                                        <li>Non-Masking</li>
-                                        <li>Web & API</li>
-                                    </ul>
-                                    <div class="btn-wrap">
-                                        <a href="https://panel.smsbangladesh.com/register" class="btn-buy">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-            
-
-
-                    </div>
-                </div>
         </section>
         <!-- End Pricing Section -->
 
