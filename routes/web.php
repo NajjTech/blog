@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PriceController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,17 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'],funct
     Route::post('/update_price/{id}',[PriceController::class,'UpdatePrice']);
     Route::get('/viewprice/{id}',[PriceController::class,'ViewPrice']);
     Route::get('/delete_price/{id}',[PriceController::class,'DeletePrice']);
+
+
+    // Team List
+    Route::get('/manage_dev',[TeamController::class,'index']);
+    Route::get('/new_dev',[TeamController::class,'create']);
+    Route::post('/price_store',[TeamController::class,'Store']);
+    Route::get('/price_status/{id}/{status}',[TeamController::class,'PriceStatus']);
+    Route::get('/edit_price/{id}',[TeamController::class,'EditPrice']);
+    Route::post('/update_price/{id}',[TeamController::class,'UpdatePrice']);
+    Route::get('/viewprice/{id}',[TeamController::class,'ViewPrice']);
+    Route::get('/delete_price/{id}',[TeamController::class,'DeletePrice']);
 
 
 
